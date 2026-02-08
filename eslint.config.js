@@ -21,11 +21,13 @@ module.exports = defineConfig([
 		},
 		processor: angular.processInlineTemplates,
 		rules: {
+			'@angular-eslint/component-class-suffix': ['error'],
+			'@angular-eslint/directive-class-suffix': ['error'],
 			'@angular-eslint/directive-selector': [
 				'error',
 				{
 					type: 'attribute',
-					prefix: 'app',
+					prefix: ['app', 'c'],
 					style: 'camelCase',
 				},
 			],
@@ -33,7 +35,7 @@ module.exports = defineConfig([
 				'error',
 				{
 					type: 'element',
-					prefix: 'app',
+					prefix: ['app', 'c'],
 					style: 'kebab-case',
 				},
 			],
