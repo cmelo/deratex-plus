@@ -3,9 +3,9 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
 	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrl: './app.component.scss',
 	imports: [RouterOutlet],
-	templateUrl: './app.html',
-	styleUrl: './app.scss',
 })
 export class AppComponent {
 	protected readonly title = signal('deratex');
