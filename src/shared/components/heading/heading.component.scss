@@ -1,0 +1,25 @@
+:host {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	max-width: 50rem;
+	margin: 0 auto 4rem;
+	gap: 1rem;
+	text-align: center;
+	::ng-deep {
+		h2 {
+			background: linear-gradient(
+				135deg,
+				var(--mat-sys-on-surface-variant) 0%,
+				var(--mat-sys-on-surface) 50%,
+				var(--mat-sys-on-surface-variant) 100%
+			);
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		p {
+			font: var(--mat-sys-body-large);
+		}
+	}
+}

@@ -1,0 +1,138 @@
+@use 'sass:map';
+@use 'sass:color';
+@use '@angular/material' as mat;
+
+// $primary: #ff0000;
+// $secondary: #dd8800;
+// $tertiary: #4400bb;
+
+$primary: #008cff;
+$secondary: #ff0000;
+// $tertiary: #00bb44;
+// $tertiary: #3388ff;
+$tertiary: #00bb44;
+
+$_palettes: (
+	primary: (
+		0: color.adjust($primary, $blackness: 100%),
+		10: color.adjust($primary, $blackness: 80%),
+		20: color.adjust($primary, $blackness: 60%),
+		30: color.adjust($primary, $blackness: 40%),
+		40: color.adjust($primary, $blackness: 20%),
+		50: $primary,
+		60: color.mix($primary, #ffffff, 80%, hwb),
+		70: color.mix($primary, #ffffff, 60%, hwb),
+		80: color.mix($primary, #ffffff, 40%, hwb),
+		90: color.mix($primary, #ffffff, 20%, hwb),
+		95: color.mix($primary, #ffffff, 10%, hwb),
+		98: color.mix($primary, #ffffff, 4%, hwb),
+		99: color.mix($primary, #ffffff, 2%, hwb),
+		100: color.mix($primary, #ffffff, 0%, hwb),
+	),
+	secondary: (
+		0: color.adjust($secondary, $blackness: 100%),
+		10: color.adjust($secondary, $blackness: 80%),
+		20: color.adjust($secondary, $blackness: 60%),
+		30: color.adjust($secondary, $blackness: 40%),
+		40: color.adjust($secondary, $blackness: 20%),
+		50: $secondary,
+		60: color.mix($secondary, #ffffff, 80%, hwb),
+		70: color.mix($secondary, #ffffff, 60%, hwb),
+		80: color.mix($secondary, #ffffff, 40%, hwb),
+		90: color.mix($secondary, #ffffff, 20%, hwb),
+		95: color.mix($secondary, #ffffff, 10%, hwb),
+		98: color.mix($secondary, #ffffff, 4%, hwb),
+		99: color.mix($secondary, #ffffff, 2%, hwb),
+		100: color.mix($secondary, #ffffff, 0%, hwb),
+	),
+	tertiary: (
+		0: color.adjust($tertiary, $blackness: 100%),
+		10: color.adjust($tertiary, $blackness: 80%),
+		20: color.adjust($tertiary, $blackness: 60%),
+		30: color.adjust($tertiary, $blackness: 40%),
+		40: color.adjust($tertiary, $blackness: 20%),
+		50: $tertiary,
+		60: color.mix($tertiary, #ffffff, 80%, hwb),
+		70: color.mix($tertiary, #ffffff, 60%, hwb),
+		80: color.mix($tertiary, #ffffff, 40%, hwb),
+		90: color.mix($tertiary, #ffffff, 20%, hwb),
+		95: color.mix($tertiary, #ffffff, 10%, hwb),
+		98: color.mix($tertiary, #ffffff, 4%, hwb),
+		99: color.mix($tertiary, #ffffff, 2%, hwb),
+		100: color.mix($tertiary, #ffffff, 0%, hwb),
+	),
+	neutral: (
+		0: #000000,
+		10: #1b1c1c,
+		20: #303031,
+		25: #3b3b3c,
+		30: #464747,
+		35: #525253,
+		40: #5e5e5e,
+		50: #777777,
+		60: #919191,
+		70: #ababab,
+		80: #c7c6c6,
+		90: #e3e2e2,
+		95: #f2f0f0,
+		98: #faf9f9,
+		99: #fdfcfc,
+		100: #ffffff,
+		4: #0d0e0f,
+		6: #121414,
+		12: #1f2020,
+		17: #292a2a,
+		22: #343535,
+		24: #383939,
+		87: #dbdad9,
+		92: #e9e8e8,
+		94: #efeded,
+		96: #f5f3f3,
+	),
+	neutral-variant: (
+		0: #000000,
+		10: #1b1c1c,
+		20: #303031,
+		25: #3b3b3c,
+		30: #464747,
+		35: #525253,
+		40: #5e5e5e,
+		50: #777777,
+		60: #919191,
+		70: #ababab,
+		80: #c7c6c6,
+		90: #e3e2e2,
+		95: #f2f0f0,
+		98: #faf9f9,
+		99: #fdfcfc,
+		100: #ffffff,
+	),
+	error: (
+		0: #000000,
+		10: #410000,
+		20: #690100,
+		25: #7e0100,
+		30: #930100,
+		35: #a90100,
+		40: #c00100,
+		50: #ef0000,
+		60: #ff5540,
+		70: #ff8a78,
+		80: #ffb4a8,
+		90: #ffdad4,
+		95: #ffedea,
+		98: #fff8f6,
+		99: #fffbff,
+		100: #ffffff,
+	),
+);
+
+$_rest: (
+	secondary: map.get($_palettes, secondary),
+	neutral: map.get($_palettes, neutral),
+	neutral-variant: map.get($_palettes, neutral-variant),
+	error: map.get($_palettes, error),
+);
+
+$primary-palette: map.merge(map.get($_palettes, primary), $_rest);
+$tertiary-palette: map.merge(map.get($_palettes, tertiary), $_rest);

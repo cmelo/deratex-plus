@@ -1,0 +1,40 @@
+<div class="container">
+	<c-heading>
+		<h2>Čo hovoria naši zákazníci</h2>
+		<p>Referencie od spokojných klientov</p>
+	</c-heading>
+
+	<div class="testimonials-grid">
+		@for (testimonial of testimonials; track testimonial.authorName) {
+			<mat-card [appearance]="'outlined'">
+				<mat-card-header>
+					<div class="testimonial-rating">
+						<mat-icon>star</mat-icon>
+						<mat-icon>star</mat-icon>
+						<mat-icon>star</mat-icon>
+						<mat-icon>star</mat-icon>
+						<mat-icon>star</mat-icon>
+					</div>
+				</mat-card-header>
+				<mat-card-content>
+					<p>"{{ testimonial.text }}"</p>
+				</mat-card-content>
+				<mat-card-footer>
+					<div class="testimonial-author">
+						<div class="author-avatar">
+							{{ testimonial.authorInitial }}
+						</div>
+						<div>
+							<div class="author-name">
+								{{ testimonial.authorName }}
+							</div>
+							<div class="author-type">
+								{{ testimonial.authorType }}
+							</div>
+						</div>
+					</div>
+				</mat-card-footer>
+			</mat-card>
+		}
+	</div>
+</div>

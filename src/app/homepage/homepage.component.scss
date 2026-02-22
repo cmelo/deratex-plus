@@ -1,0 +1,10 @@
+:host {
+	> * {
+		border-top: 1px dashed var(--mat-sys-outline-variant);
+		background: var(--mat-sys-surface-container-lowest);
+
+		&:nth-child(2n-1) {
+			background: var(--bg-with-gradient);
+		}
+	}
+}

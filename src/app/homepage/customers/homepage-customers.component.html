@@ -1,0 +1,27 @@
+<div class="container">
+	<c-heading>
+		<h2>{{ sectionTitle }}</h2>
+		<p>{{ sectionDescription }}</p>
+	</c-heading>
+
+	<div class="customers-grid">
+		@for (customer of customers; track customer.title) {
+			<mat-card [appearance]="'outlined'">
+				<mat-card-content>
+					<h4>{{ customer.title }}</h4>
+					<p>{{ customer.description }}</p>
+				</mat-card-content>
+				<mat-card-footer>
+					<mat-card-actions>
+						<a [matButton]="'outlined'" href="#contact">
+							Objednať
+							<mat-icon iconPositionEnd
+								>pest_control_rodent</mat-icon
+							>
+						</a>
+					</mat-card-actions>
+				</mat-card-footer>
+			</mat-card>
+		}
+	</div>
+</div>

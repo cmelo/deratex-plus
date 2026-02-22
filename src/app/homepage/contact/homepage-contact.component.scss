@@ -1,0 +1,53 @@
+:host {
+	display: block;
+	padding: 6rem 0;
+
+	.contact-details {
+		display: flex;
+		flex-direction: row wrap;
+		gap: 2rem;
+	}
+
+	.contact-item {
+		display: flex;
+		flex: 1;
+		gap: 1rem;
+	}
+
+	h4 {
+		margin: 1rem 0;
+	}
+
+	p {
+		line-height: 2;
+		a {
+			background: linear-gradient(
+				90deg,
+				var(--mat-sys-tertiary) 0%,
+				var(--mat-sys-primary) 50%
+			);
+			background-size: 200%;
+			-webkit-text-fill-color: transparent;
+			background-position: 100% 0;
+			background-clip: text;
+			text-decoration: none;
+			transition: 0.3s all linear;
+			&:hover {
+				background-position: 0 0;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.contact-icon {
+		margin-top: 0.5rem;
+		.mat-icon {
+			width: 1em;
+			height: 1em;
+			font-weight: 100;
+			font-size: 3em;
+			font-variation-settings: 'wght' 300;
+			opacity: 0.2;
+		}
+	}
+}

@@ -1,3 +1,62 @@
 <footer>
-	<p>&copy; Deratex. All rights reserved.</p>
+	<div class="container">
+		<div class="footer-content">
+			<div class="footer-column">
+				<h3>
+					<c-logo
+						class="img"
+						[color]="'var(--mat-sys-on-surface-variant)'"
+					></c-logo>
+				</h3>
+				<p>
+					Profesionálne služby deratizácie, dezinsekcie a dezinfekcie.
+					Chránime vaše zdravie a majetok od roku 2000.
+				</p>
+			</div>
+
+			<div class="footer-column">
+				<h4>Informácie</h4>
+				<ul>
+					@for (link of menu; track link) {
+						<li>
+							<a [href]="'#' + link.id">{{ link.label }}</a>
+						</li>
+					}
+				</ul>
+			</div>
+
+			<div class="footer-column">
+				<h4>Sociálne siete</h4>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Instagram</a></li>
+					<li><a href="#">TikTok</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-column">
+				<h4>Kontakt</h4>
+				<ul class="footer-contact">
+					<li>Hlavná 123, 900 01 Bratislava</li>
+					<li>
+						<a href="tel:+421905123456">+421 905 123 456</a>
+					</li>
+					<li>
+						<a href="mailto:info@deratexplus.sk"
+							>info@deratexplus.sk</a
+						>
+					</li>
+					<li>PO - NE: 7:00 - 22:00</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>&copy; Deratex Plus s. r. o. Všetky práva vyhradené.</p>
+			<div class="footer-links">
+				<a href="#">Ochrana osobných údajov</a>
+				<a href="#">Obchodné podmienky</a>
+			</div>
+		</div>
+	</div>
 </footer>

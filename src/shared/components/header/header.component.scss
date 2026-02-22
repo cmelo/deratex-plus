@@ -1,8 +1,69 @@
 :host {
 	header {
+		z-index: 1000;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-bottom: 1px solid var(--mat-sys-outline-variant);
+		backdrop-filter: blur(12px);
+		background: color-mix(
+			in srgb,
+			var(--mat-sys-surface-container-lowest) 80%,
+			transparent
+		);
+
+		transition: all 0.3s ease;
+	}
+
+	.menu {
+		align-self: flex-end;
+		margin: -1rem 0 calc(-1rem - 1px);
+		--mat-tab-active-indicator-height: 4px;
+		--mat-tab-divider-height: 0;
+		::ng-deep .mdc-tab {
+			height: auto;
+			padding: 2rem 1rem 1.7rem;
+		}
+	}
+
+	.navig {
+		display: none;
+	}
+	@media (min-width: 1200px) {
+		.navig {
+			display: block;
+		}
+	}
+
+	.container {
 		display: flex;
-		flex-flow: row nowrap;
 		align-items: center;
 		justify-content: space-between;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		.img {
+			min-width: 12rem;
+		}
+		h1 {
+			z-index: -1;
+			position: absolute;
+			opacity: 0;
+		}
+	}
+
+	button[mat-icon-button] {
+		margin-left: 0.5rem;
+	}
+
+	.actions {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 }

@@ -1,16 +1,42 @@
 <header>
-	<h1>Deratex</h1>
+	<div class="container">
+		<div class="logo">
+			<c-logo class="img"></c-logo>
+			<h1>Deratex Plus</h1>
+		</div>
 
-	<div>
-		<nav mat-tab-nav-bar [tabPanel]="tabPanel" [mat-stretch-tabs]="false">
-			<a mat-tab-link [active]="true">aaa</a>
-			<a mat-tab-link>bbb</a>
-			<a mat-tab-link>ccc</a>
-			<a mat-tab-link>ddd</a>
-		</nav>
-		<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+		<div class="navig">
+			<nav class="menu" mat-tab-nav-bar [tabPanel]="tabPanel">
+				@for (link of menu; track link) {
+					<a
+						mat-tab-link
+						tabindex="-1"
+						href="#{{ link.id }}"
+						(click)="active.set(link.id)"
+						(keydown.enter)="active.set(link.id)"
+						[active]="active() === link.id"
+					>
+						{{ link.label }}
+					</a>
+				}
+			</nav>
+			<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+		</div>
+
+		<div class="actions">
+			<a mat-flat-button href="tel:+421905123456"
+				><mat-icon>phone</mat-icon> +421 905 123 456</a
+			>
+
+			<button
+				mat-icon-button
+				(click)="themeService.toggle()"
+				matTooltip="Zmeniť tému"
+			>
+				<mat-icon>{{
+					themeService.theme() === 'dark' ? 'light_mode' : 'dark_mode'
+				}}</mat-icon>
+			</button>
+		</div>
 	</div>
-	<p>
-		<button mat-flat-button>Kontakt</button>
-	</p>
 </header>

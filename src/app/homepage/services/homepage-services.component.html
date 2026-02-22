@@ -1,0 +1,81 @@
+<div class="container">
+	<c-heading>
+		<h2>Naše služby</h2>
+		<p>Komplexné riešenia pre každý typ škoxdcu</p>
+	</c-heading>
+
+	<div class="services-grid">
+		<mat-card [appearance]="'outlined'">
+			<mat-card-content>
+				<img class="service-icon" src="./service-insect.svg" alt="" />
+				<h3>Dezinsekcia</h3>
+				<p>
+					Účinné odstránenie hmyzu zo všetkých typov priestorov a
+					prostredí.
+				</p>
+				<ul>
+					<li><mat-icon>check</mat-icon>Komáry a kliešte</li>
+					<li><mat-icon>check</mat-icon>Šváby a mravce</li>
+					<li><mat-icon>check</mat-icon>Osy a sršne</li>
+				</ul>
+			</mat-card-content>
+			<mat-card-footer>
+				<mat-card-actions>
+					<a href="#contact" [matButton]="'outlined'">
+						Viac informácií
+						<mat-icon iconPositionEnd>arrow_right_alt</mat-icon>
+					</a>
+				</mat-card-actions>
+			</mat-card-footer>
+		</mat-card>
+		<mat-card [appearance]="'outlined'" class="featured">
+			<mat-card-content>
+				<mat-chip>Najpopulárnejšie</mat-chip>
+
+				<img class="service-icon" src="./service-rat.svg" alt="" />
+
+				<h3>Deratizácia</h3>
+				<p>
+					Profesionálna likvidácia hlodavcov a preventívna ochrana
+					vašich priestorov.
+				</p>
+				<ul>
+					<li><mat-icon>check</mat-icon>Potkany a myši</li>
+					<li><mat-icon>check</mat-icon>Krtky a hraboše</li>
+					<li><mat-icon>check</mat-icon>Preventívne bariéry</li>
+				</ul>
+			</mat-card-content>
+			<mat-card-footer>
+				<mat-card-actions>
+					<a href="#contact" [matButton]="'outlined'">
+						Viac informácií
+						<mat-icon iconPositionEnd>arrow_right_alt</mat-icon>
+					</a>
+				</mat-card-actions>
+			</mat-card-footer>
+		</mat-card>
+		<mat-card [appearance]="'outlined'">
+			<mat-card-content>
+				<img class="service-icon" src="./service-infect.svg" alt="" />
+				<h3>Dezinfekcia</h3>
+				<p>
+					Dôkladné odstránenie vírusov, baktérií a patogénov z vašich
+					priestorov.
+				</p>
+				<ul>
+					<li><mat-icon>check</mat-icon>Vírusy a baktérie</li>
+					<li><mat-icon>check</mat-icon>Plesne a huby</li>
+					<li><mat-icon>check</mat-icon>Sanitácia priestorov</li>
+				</ul>
+			</mat-card-content>
+			<mat-card-footer>
+				<mat-card-actions>
+					<a href="#contact" [matButton]="'outlined'">
+						Viac informácií
+						<mat-icon iconPositionEnd>arrow_right_alt</mat-icon>
+					</a>
+				</mat-card-actions>
+			</mat-card-footer>
+		</mat-card>
+	</div>
+</div>

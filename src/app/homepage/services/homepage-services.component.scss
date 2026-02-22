@@ -1,0 +1,59 @@
+:host {
+	display: block;
+	padding: 6rem 0;
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+	}
+
+	.featured {
+		border: 1px solid var(--mat-sys-tertiary);
+		background: linear-gradient(
+			135deg,
+			var(--mat-sys-tertiary-container) 20%,
+			var(--mat-sys-surface-container-low) 80%
+		);
+	}
+
+	.mat-mdc-chip {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-color: var(--mat-sys-surface-container-lowest);
+	}
+
+	.service-icon {
+		display: block;
+		height: 10rem;
+		margin: 2rem auto;
+	}
+
+	.mat-mdc-card {
+		h3 {
+			margin: 1rem 0;
+		}
+
+		p {
+			margin: 1rem 0;
+		}
+
+		ul {
+			margin: 2rem 0 0;
+			list-style: none;
+
+			li {
+				display: grid;
+				position: relative;
+				grid-template-columns: max-content 1fr;
+				margin: 1rem 0;
+				gap: 0.5rem;
+
+				.mat-icon {
+					color: var(--mat-sys-tertiary);
+				}
+			}
+		}
+	}
+}

@@ -1,8 +1,82 @@
 :host {
-	footer {
+	display: block;
+	padding: 4rem 0 2rem;
+	border-top: 1px solid var(--mat-sys-outline-variant);
+	background: var(--bg-with-gradient);
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 400px repeat(auto-fit, minmax(200px, 1fr));
+		margin-bottom: 5rem;
+		gap: 3rem;
+
+		p {
+			max-width: 300px;
+		}
+	}
+
+	h3 {
+		margin: 1rem 0 0.5rem;
+		padding-left: 0.7rem;
+		.img {
+			min-width: 200px;
+		}
+	}
+	h4 {
+		margin: 1.5rem 0 1rem;
+	}
+
+	p {
+		margin-left: 46px;
+		padding-left: 0.7rem;
+		color: var(--mat-sys-on-surface-variant);
+		line-height: 1.5;
+	}
+
+	ul {
+		margin: 1.5rem 0;
+		color: var(--mat-sys-on-surface-variant);
+		list-style: none;
+		li {
+			margin: 0.5rem 0;
+		}
+	}
+
+	a {
+		background: linear-gradient(
+			90deg,
+			var(--mat-sys-on-surface) 40%,
+			var(--mat-sys-tertiary) 100%
+		);
+		background-size: 300%;
+		-webkit-text-fill-color: transparent;
+		background-position: 0 0;
+		background-clip: text;
+		text-decoration: none;
+		transition: 0.3s all linear;
+		&:hover {
+			background-position: 100% 0;
+			text-decoration: underline;
+		}
+	}
+
+	.footer-bottom {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		justify-content: center;
-		padding: 2rem;
+		justify-content: space-between;
+		padding-top: 2rem;
+		gap: 1rem;
+		border-top: 1px dashed var(--mat-sys-outline-variant);
+	}
+
+	.footer-bottom p {
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer-links {
+		display: flex;
+		gap: 2rem;
 	}
 }
