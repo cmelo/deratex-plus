@@ -6,27 +6,6 @@
 	min-height: 60vh;
 	padding-top: 80px;
 	overflow: hidden;
-	background-image:
-		radial-gradient(
-			ellipse 80% 50% at 50% -20%,
-			rgba(88, 166, 255, 0.25),
-			transparent
-		),
-		radial-gradient(
-			ellipse 60% 50% at 0% 50%,
-			rgba(126, 231, 135, 0.2),
-			transparent
-		),
-		radial-gradient(
-			ellipse 60% 50% at 100% 50%,
-			rgba(188, 140, 255, 0.2),
-			transparent
-		),
-		radial-gradient(
-			circle at 30% 50%,
-			rgba(88, 166, 255, 0.1) 0%,
-			transparent 50%
-		);
 
 	.hero-content {
 		z-index: 2;

@@ -7,25 +7,27 @@
 @use 'theme-colors' as theme;
 
 :root {
+	--bg-with-gradient-intensity: 1;
 	--bg-with-gradient:
 		radial-gradient(
 			ellipse 80% 50% at 50% -20%,
-			rgba(88, 166, 255, 0.15),
+			rgba(88, 166, 255, calc(var(--bg-with-gradient-intensity) * 0.15)),
 			transparent
 		),
 		radial-gradient(
 			ellipse 60% 50% at 0% 50%,
-			rgba(126, 231, 135, 0.1),
+			rgba(126, 231, 135, calc(var(--bg-with-gradient-intensity) * 0.1)),
 			transparent
 		),
 		radial-gradient(
 			ellipse 60% 50% at 100% 50%,
-			rgba(188, 140, 255, 0.1),
+			rgba(188, 140, 255, calc(var(--bg-with-gradient-intensity) * 0.1)),
 			transparent
 		),
 		radial-gradient(
 			circle at 30% 50%,
-			rgba(88, 166, 255, 0.05) 0%,
+			rgba(88, 166, 255, calc(var(--bg-with-gradient-intensity) * 0.05))
+				0%,
 			transparent 50%
 		);
 }
