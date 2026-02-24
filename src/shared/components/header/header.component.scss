@@ -3,8 +3,8 @@
 		z-index: 1000;
 		position: fixed;
 		top: 0;
+		right: 0;
 		left: 0;
-		width: 100%;
 		border-bottom: 1px solid var(--mat-sys-outline-variant);
 		backdrop-filter: blur(12px);
 		background: color-mix(

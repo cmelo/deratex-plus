@@ -5,10 +5,19 @@
 	background: var(--bg-with-gradient);
 
 	.footer-content {
-		display: grid;
-		grid-template-columns: 400px repeat(auto-fit, minmax(200px, 1fr));
+		display: flex;
+		flex-flow: row wrap;
 		margin-bottom: 5rem;
 		gap: 3rem;
+
+		> * {
+			flex: 1 0 10rem;
+			padding-left: 3rem;
+			&:first-child {
+				flex: 2 0 20rem;
+				padding-left: 0;
+			}
+		}
 
 		p {
 			max-width: 300px;

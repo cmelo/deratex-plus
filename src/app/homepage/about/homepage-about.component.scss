@@ -2,6 +2,7 @@
 	display: block;
 	position: relative;
 	padding: 6rem 0;
+	overflow: hidden;
 
 	.about {
 		&::before {
@@ -26,7 +27,7 @@
 		align-items: center;
 		gap: 4rem 6rem;
 		> * {
-			flex: 1 0 30rem;
+			flex: 1 1 30rem;
 		}
 	}
 
@@ -70,6 +71,7 @@
 	}
 
 	.about-content {
+		padding: 0 2rem;
 		> p {
 			margin-bottom: 2rem;
 		}
@@ -91,6 +93,7 @@
 			}
 			.feature-check {
 				display: flex;
+				flex-shrink: 0;
 				align-items: center;
 				justify-content: center;
 				width: 30px;

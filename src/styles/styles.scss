@@ -75,16 +75,19 @@ body {
 h1 {
 	font: var(--mat-sys-display-large);
 	font-weight: bold;
+	font-size: min(var(--mat-sys-display-large-size), 8vw) !important;
 }
 
 h2 {
 	font: var(--mat-sys-display-medium);
 	font-weight: bold;
+	font-size: min(var(--mat-sys-display-medium-size), 7vw) !important;
 }
 
 h3 {
 	font: var(--mat-sys-display-small);
 	font-weight: bold;
+	font-size: min(var(--mat-sys-display-small-size), 6vw) !important;
 }
 
 h4 {
